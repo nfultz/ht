@@ -23,13 +23,13 @@ This is a very basic implementation of a hash table using the \code{digest} pack
 primarily for teaching functions and S3 for R programmers.
 }
 \details{
-\code{ht} is an S3 class that extends\code{environment}, and additionally provides \code{[} and \code{[<-}.
+\code{ht} is an S3 class that extends \code{environment}, and additionally provides \code{[} and \code{[<-}.
 It can use arbitrary R objects as keys and values.
 
 Currently, default options are assummed for \code{digest}and hash collisions are not dealt with at all.
 }
 \examples{
-x <- ht();
+x <- ht()
  x[1] <- 1
  x[1:2] <- 3:4
  x[1]
@@ -38,6 +38,6 @@ x <- ht();
  if(require(digest)) x[[digest(1:2)]]
 }
 \seealso{
-digest
+\code{\link[digest]{digest}}
 }
 
