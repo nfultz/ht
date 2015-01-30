@@ -26,7 +26,7 @@ primarily for teaching functions and S3 for R programmers.
 \code{ht} is an S3 class that extends \code{environment}, and additionally provides \code{[} and \code{[<-}.
 It can use arbitrary R objects as keys and values.
 
-Currently, default options are assummed for \code{digest}and hash collisions are not dealt with at all.
+Currently, default options are assummed for \code{digest} and hash collisions are not dealt with at all.
 }
 \examples{
 x <- ht()

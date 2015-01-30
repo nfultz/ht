@@ -4,7 +4,9 @@ Title: Tiny Hash Table
 Version: 1.0
 Date: 2015-01-13
 Author: Neal Fultz
+Copyright: ZestFinance Inc 2015
 Maintainer: Neal Fultz <njf@zestfinance.com>
-Description: This is a minimal implementation of a hash table using the digest package.
+Description: A minimal implementation of a hash table using the digest package.
 License: GPL-3
+URL: http://github.com/nfultz/ht
 Imports: digest
