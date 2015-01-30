@@ -6,5 +6,5 @@ Date: 2015-01-13
 Author: Neal Fultz
 Maintainer: Neal Fultz <njf@zestfinance.com>
 Description: This is a minimal implementation of a hash table using the digest package.
-License: GPL3
+License: GPL-3
 Imports: digest
