@@ -24,7 +24,7 @@ NULL
 #' @export
 #' @rdname ht
 ht <- function(){
-  `class<-`(new.env(parent = emptyenv()) , "ht");
+  structure(new.env(parent = emptyenv()), class="ht");
 }
 
 #' @param x an \code{ht} object
