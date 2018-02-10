@@ -3,7 +3,7 @@
 #' This is a very basic implementation of a hash table using the \code{digest} package,
 #' primarily for teaching functions and S3 for R programmers.
 #' 
-#' \code{ht} is an S3 class that extends \code{environment}, and additionally provides \code{[} and \code{[<-}.
+#' \code{ht} is an S3 class that extends \code{environment}, and additionally provides \code{[}, \code{[<-}, and \code{%in%}.
 #' It can use arbitrary R objects as keys and values.
 #' 
 #' Currently, default options are assummed for \code{digest} and hash collisions are not dealt with at all.
@@ -17,6 +17,7 @@
 #'  x[1:2] <- 3:4
 #'  x[1]
 #'  x[1:2]
+#'  1:2 %in.ht% x
 #'  mget(ls(x),x)
 #'  if(require(digest)) x[[digest(1:2)]]
 NULL
@@ -41,4 +42,10 @@ ht <- function(){
 `[<-.ht` <- function(x, index, value) {
   x[[digest(index)]] <- list(key=index, value=value);
   x;
+}
+
+#' @export
+#' @rdname ht
+`%in.ht%` <- function(index, x) {
+  !is.null(x[index]);
 }
