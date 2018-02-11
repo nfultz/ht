@@ -17,6 +17,7 @@
 #'  x[1:2] <- 3:4
 #'  x[1]
 #'  x[1:2]
+#'  1:2 %in.ht% x
 #'  mget(ls(x),x)
 #'  if(require(digest)) x[[digest(1:2)]]
 NULL
@@ -41,4 +42,10 @@ ht <- function(){
 `[<-.ht` <- function(x, index, value) {
   x[[digest(index)]] <- list(key=index, value=value);
   x;
+}
+
+#' @export
+#' @rdname ht
+`%in.ht%` <- function(index, x) {
+  exists(digest(index), envir = x, inherits = FALSE)
 }

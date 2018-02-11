@@ -10,3 +10,4 @@ Description: A minimal implementation of a hash table using the digest package.
 License: GPL-3
 URL: http://github.com/nfultz/ht
 Imports: digest
+RoxygenNote: 6.0.1
